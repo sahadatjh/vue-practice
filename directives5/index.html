@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Js</title>
+    <style type="text/css">
+        .colorRed{height: 200px; width: 200px; background-color: red;}
+    </style>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="directives">
+       <img v-bind:src="src" v-bind:alt="alt">
+       <img :src="src2" :alt="alt2">
+       <a :href="link">My Facebook</a>
+       <hr>
+       <div v-bind:class="newClass">
+           hi
+       </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
