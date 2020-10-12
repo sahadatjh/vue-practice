@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE||Computed</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="a++">Add A</button>
+        <button v-on:click="b++">Add B</button>
+
+        <p>A={{a}}</p>
+        <p>B={{b}}</p>
+
+        <p>salary + A = {{addToA}}</p> <!-- when use computed, function call without parenthisis() -->
+        <p>salary + B = {{addToB}}</p>
+    </div>
+
+    <script>
+        var vueObj = new Vue({
+            el: "#app",
+            data: {
+                a:0,
+                b:0,
+                salary:10
+            },
+            //all function are excuted when call one function so use "computed"
+            // methods: {
+            //     addToA(){
+            //         console.log("add A");
+            //         return this.a + this.salary;
+            //     },
+            //     addToB(){
+            //         console.log("add B");
+            //         return this.b + this.salary;
+            //     }
+            // },
+            computed: {
+                addToA(){
+                    console.log("add A");
+                    return this.a + this.salary;
+                },
+                addToB(){
+                    console.log("add B");
+                    return this.b + this.salary;
+                }
+            },
+            
+        })
+    </script>
+</body>
+</html>

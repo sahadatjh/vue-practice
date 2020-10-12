@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Loops</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="loops">
+        <p>{{name}}</p>
+        <ul>
+            <li v-for="(val, name, index) in friends">{{index}} : {{name}} : {{val}}</li>
+        </ul>
+        <ul>
+            <li v-for="(val, name, index) in user">{{index}} : {{name}} : {{val}}</li>
+        </ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

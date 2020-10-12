@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE Event</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-once>{{name}}</h1> 
+        <div v-on:mousemove="getValue" class="box">
+            <h2>Hi <strong class="color">{{name}}</strong> , Plz move your mouse on the box</h2>
+        </div>
+        <p>Value of X: {{x}}</p>
+        <p>Value of Y: {{y}}</p>
+        <button @click="changeUser">Change User</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+<style>
+    .box{
+        background-color: chocolate;
+        height: 300px;
+        width: 300px;
+    }
+    .color{
+        color: white;
+        font-size: 30px;
+    }
+</style>
+</html>

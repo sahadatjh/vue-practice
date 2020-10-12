@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE Event</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <form v-on:submit.prevent="handleForm">
+            <label> first Name</label>
+            <input type="text" v-model="formData.firstName"><br>
+            <label> last Name</label>
+            <input type="text" v-model="formData.lastName">
+            <button type="submit">submit</button>
+        </form>
+    </div><hr>
+    <div id="app2">
+        <form>
+            <label> Type message: </label>
+            <input type="text" v-model="message">
+            <h2>{{message}}</h2>
+        </form>
+    </div>
+    <script>
+        var objVue=new Vue({
+            el:"#app",
+            data: {
+                formData: {
+                    firstName: '',
+                    lastName: ''
+                }
+                
+            },
+            methods: {
+                handleForm(){
+                    console.log(this.formData);
+                }
+            }
+
+        });
+        var app2=new Vue({
+            el:"#app2",
+            data: {
+                message:'Plz type here'
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE Text and html directives</title>
+    <script src="vue.js"></script>
+</head>
+<body>
+    <div id="textDirectives">
+        <p v-text="myText"></p>
+        <p v-html="htmlCode"></p>
+        <h1>{{directivesPart8}}</h1>
+        <p v-if="userAge > allowedAge">Hi {{user}} , You are eligible for this.</p>
+        <p v-else>Hi {{user}} , You are not eligible for this.Because you are still very young </p>
+        <button v-on:click="notAllow">click me</button>
+        <hr>
+        <p v-if="checkUser()">Hi {{user}} , You are good to go.</p>
+        <p v-else>Hi {{user}} , You are not expectable user. </p>
+        <button @click="changeUser">change user</button> <hr>
+        <p v-show="userAge > 20">i am {{user}}. i'm {{userAge}} year's old.</p>
+        <p v-show="userAge < 20">i am {{user}}. i'm {{userAge}} year's old.</p><hr>
+        <h2>{{varOnce}}</h2>
+        <h2 v-once>{{varOnce}}</h2>
+        {{vonce()}}
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
